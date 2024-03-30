@@ -18,7 +18,7 @@
             <ul class="navbar-nav">
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">Login</a>
+                        <a class="nav-link" href="">Login</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Create user</a>
