@@ -21,14 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-<<<<<<< HEAD
-        'phone',
-        'phone',
-        'image'
-        
-=======
-        'phone_image',    
->>>>>>> Register_user_(phone,_image)
+        'phone_image',
     ];
 	
 	/**
@@ -39,9 +32,6 @@ class User extends Authenticatable
     protected $hidden = [
         'password'
     ];
-
-<<<<<<< HEAD
-=======
     /**
      * The attributes that should be cast.
      *
@@ -50,6 +40,4 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
->>>>>>> Register_user_(phone,_image)
 }

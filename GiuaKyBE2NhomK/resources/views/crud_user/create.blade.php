@@ -8,11 +8,7 @@
                     <div class="card">
                         <h3 class="card-header text-center">Create User</h3>
                         <div class="card-body">
-<<<<<<< HEAD
-                            <form action="" method="POST" enctype="multipart/form-data">
-=======
                             <form action="{{ route('user.createUser') }}" method="POST" enctype="multipart/form-data">
->>>>>>> Register_user_(phone,_image)
                                 @csrf
                                 <div class="form-group mb-3">
                                     <input type="text" placeholder="Name" id="name" class="form-control" name="name"
@@ -36,24 +32,10 @@
                                     @endif
                                 </div>
                                 <div class="form-group mb-3">
-<<<<<<< HEAD
-                                    <input type="text" placeholder="Phone" id="phone" class="form-control"
-                                           name="phone" required>
-                                    @if ($errors->has('phone'))
-                                        <span class="text-danger">{{ $errors->first('phone') }}</span>
-                                    @endif
-                                </div>
-                                <div class="form-group mb-3">
-                                    <input type="file" placeholder="fileToUpload" id="fileToUpload" class="form-control"
-                                           name="image" required>
-                                    @if ($errors->has('phone'))
-                                        <span class="text-danger">{{ $errors->first('phone') }}</span>
-=======
                                     <input type="file" placeholder="fileToUpload" id="fileToUpload" class="form-control"
                                            name="phone_image" required>
                                     @if ($errors->has('phone_image'))
                                         <span class="text-danger">{{ $errors->first('phone_image') }}</span>
->>>>>>> Register_user_(phone,_image)
                                     @endif
                                 </div>
                                 <div class="d-grid mx-auto">

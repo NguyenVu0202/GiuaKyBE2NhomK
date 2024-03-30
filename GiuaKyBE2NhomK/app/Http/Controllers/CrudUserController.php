@@ -1,14 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-<<<<<<< HEAD
-class CrudUserController extends Controller
-{
-    public function createUser()
-    {
-        return view('crud_user.create');
-    }
-=======
 use Illuminate\Http\Request;
 use Illuminate\Routing\Redirector;
 use Hash;
@@ -51,5 +43,4 @@ class CrudUserController extends Controller
 
         return redirect()->route('user.createUserIndex');
     }
->>>>>>> Register_user_(phone,_image)
 }
