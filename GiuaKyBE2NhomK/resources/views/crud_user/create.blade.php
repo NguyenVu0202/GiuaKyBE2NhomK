@@ -8,7 +8,7 @@
                     <div class="card">
                         <h3 class="card-header text-center">Create User</h3>
                         <div class="card-body">
-                            <form action="" method="POST">
+                            <form action="{{ route('user.createUser') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group mb-3">
                                     <input type="text" placeholder="Name" id="name" class="form-control" name="name"
@@ -29,6 +29,13 @@
                                            name="password" required>
                                     @if ($errors->has('password'))
                                         <span class="text-danger">{{ $errors->first('password') }}</span>
+                                    @endif
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input type="file" placeholder="fileToUpload" id="fileToUpload" class="form-control"
+                                           name="phone_image" required>
+                                    @if ($errors->has('phone_image'))
+                                        <span class="text-danger">{{ $errors->first('phone_image') }}</span>
                                     @endif
                                 </div>
                                 <div class="d-grid mx-auto">

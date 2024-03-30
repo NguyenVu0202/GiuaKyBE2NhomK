@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\LoginController;
+use App\Http\Controllers\CrudUserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,4 +13,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('dashboard', [CrudUserController::class, 'dashboard']);
+Route::get('create', [CrudUserController::class, 'indexCreate'])->name('user.createUserIndex');
+Route::post('create', [CrudUserController::class, 'createUser'])->name('user.createUser');
