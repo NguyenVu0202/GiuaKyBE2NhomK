@@ -14,4 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('dashboard', [CrudUserController::class, 'dashboard']);
+<<<<<<< HEAD
 Route::get('create', [CrudUserController::class, 'createUser'])->name('user.createUser');
+=======
+Route::get('create', [CrudUserController::class, 'indexCreate'])->name('user.createUserIndex');
+Route::post('create', [CrudUserController::class, 'createUser'])->name('user.createUser');
+>>>>>>> Register_user_(phone,_image)

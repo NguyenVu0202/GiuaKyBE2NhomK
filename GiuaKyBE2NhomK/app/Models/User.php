@@ -21,10 +21,14 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+<<<<<<< HEAD
         'phone',
         'phone',
         'image'
         
+=======
+        'phone_image',    
+>>>>>>> Register_user_(phone,_image)
     ];
 	
 	/**
@@ -36,4 +40,16 @@ class User extends Authenticatable
         'password'
     ];
 
+<<<<<<< HEAD
+=======
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array<string, string>
+     */
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
+
+>>>>>>> Register_user_(phone,_image)
 }
