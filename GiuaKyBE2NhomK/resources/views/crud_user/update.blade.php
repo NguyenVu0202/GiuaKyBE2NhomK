@@ -33,11 +33,15 @@
                                     @endif
                                 </div>
                                 <div class="form-group mb-3">
-                                    <input type="file" placeholder="fileToUpload" id="fileToUpload" class="form-control"
-                                           name="phone_image" value="{{ $user->phone_image }}" i required>
-                                    @if ($errors->has('phone_image'))
-                                        <span class="text-danger">{{ $errors->first('phone_image') }}</span>
+                                    <input type="number" placeholder="Phone" id="phone" class="form-control"
+                                           name="phone" value="{{ $user->phone }}" required autofocus>
+                                    @if ($errors->has('phone'))
+                                        <span class="text-danger">{{ $errors->first('phone') }}</span>
                                     @endif
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input type="file" placeholder="fileToUpload" id="fileToUpload" class="form-control"
+                                           name="image"i>
                                 </div>
                                 <div class="d-grid mx-auto">
                                     <button type="submit" class="btn btn-dark btn-block">Submit</button>
