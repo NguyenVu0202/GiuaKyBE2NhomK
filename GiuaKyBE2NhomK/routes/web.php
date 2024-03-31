@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('dashboard', [CrudUserController::class, 'dashboard']);
-
 Route::get('create', [CrudUserController::class, 'indexCreate'])->name('user.createUserIndex');
 Route::post('create', [CrudUserController::class, 'createUser'])->name('user.createUser');
+
+Route::get('list', [CrudUserController::class, 'listUser'])->name('user.listUserIndex');
+
+Route::get('update', [CrudUserController::class, 'UpdateUser'])->name('user.UpdatetUser');
+Route::post('update', [CrudUserController::class, 'PostUpdateUser'])->name('user.PostUpdatetUser');

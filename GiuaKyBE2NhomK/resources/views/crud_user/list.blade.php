@@ -10,20 +10,26 @@
                             <th>ID</th>
                             <th>Name</th>
                             <th>Email</th>
+                            <th>Phone</th>
+                            <th>Image</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
+                    @foreach($users as $user)
                             <tr>
-                                <th>01</th>
-                                <th>NguyenVu</th>
-                                <th>nhieucon2014ncvn@gmail.com</th>
+                                <th>{{ $user->id }}</th>
+                                <th>{{ $user->name }}</th>
+                                <th>{{ $user->email }}</th>
+                                <th>{{ $user->phone }}</th>
+                                <td><img style="width: 70px; height: 70px" src="{{ asset('uploads/userimage/' . $user->image) }}" alt="Phone Image"></td>
                                 <th>
                                     <a href="">View</a> |
-                                    <a href="">Edit</a> |
+                                    <a href="{{ route('user.UpdatetUser', ['id' => $user->id]) }}">Edit</a> |
                                     <a href="">Delete</a>
                                 </th>
                             </tr>
+                    @endforeach
                     </tbody>
                 </table>
             </div>
