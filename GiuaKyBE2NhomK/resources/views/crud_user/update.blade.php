@@ -8,21 +8,19 @@
                     <div class="card">
                         <h3 class="card-header text-center">Update User</h3>
                         <div class="card-body">
-                            <form action="" method="POST">
+                            <form action="{{ route('user.PostUpdatetUser') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
-                                <input name="id" type="hidden" value="">
+                                <input name="id" type="hidden" value="{{$user->id}}">
                                 <div class="form-group mb-3">
                                     <input type="text" placeholder="Name" id="name" class="form-control" name="name"
-                                           value=""
-                                           required autofocus>
+                                    value="{{ $user->name }}" required autofocus>
                                     @if ($errors->has('name'))
                                         <span class="text-danger">{{ $errors->first('name') }}</span>
                                     @endif
                                 </div>
                                 <div class="form-group mb-3">
                                     <input type="text" placeholder="Email" id="email_address" class="form-control"
-                                           value=""
-                                           name="email" required autofocus>
+                                           name="email" value="{{ $user->email }}" required autofocus>
                                     @if ($errors->has('email'))
                                         <span class="text-danger">{{ $errors->first('email') }}</span>
                                     @endif
@@ -34,9 +32,15 @@
                                         <span class="text-danger">{{ $errors->first('password') }}</span>
                                     @endif
                                 </div>
-
+                                <div class="form-group mb-3">
+                                    <input type="file" placeholder="fileToUpload" id="fileToUpload" class="form-control"
+                                           name="phone_image" value="{{ $user->phone_image }}" i required>
+                                    @if ($errors->has('phone_image'))
+                                        <span class="text-danger">{{ $errors->first('phone_image') }}</span>
+                                    @endif
+                                </div>
                                 <div class="d-grid mx-auto">
-                                    <button type="submit" class="btn btn-dark btn-block">Update</button>
+                                    <button type="submit" class="btn btn-dark btn-block">Submit</button>
                                 </div>
                             </form>
                         </div>
