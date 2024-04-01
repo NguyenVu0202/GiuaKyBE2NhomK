@@ -100,4 +100,12 @@ class CrudUserController extends Controller
         return redirect('list');
 
     }
+
+    // Delete user by id
+    public function deleteUser(Request $request)
+    {
+        $user_id =$request->get('id');
+        $user = User::destroy($user_id);
+        return redirect("list")->withSuccess('You have Signed-in');
+    }
 }
