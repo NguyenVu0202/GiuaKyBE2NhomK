@@ -26,7 +26,7 @@
                                 <th>
                                     <a href="">View</a> |
                                     <a href="{{ route('user.UpdatetUser', ['id' => $user->id]) }}">Edit</a> |
-                                    <a href="">Delete</a>
+                                    <a href="{{route('user.deleteUser',['id' => $user->id]) }}">Delete</a>
                                 </th>
                             </tr>
                     @endforeach

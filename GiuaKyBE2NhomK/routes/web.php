@@ -21,3 +21,6 @@ Route::get('list', [CrudUserController::class, 'listUser'])->name('user.listUser
 
 Route::get('update', [CrudUserController::class, 'UpdateUser'])->name('user.UpdatetUser');
 Route::post('update', [CrudUserController::class, 'PostUpdateUser'])->name('user.PostUpdatetUser');
+
+
+Route::get('delete', [CrudUserController::class, 'deleteUser'])->name('user.deleteUser');
