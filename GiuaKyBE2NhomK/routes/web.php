@@ -18,8 +18,8 @@ Route::get('create', [CrudUserController::class, 'indexCreate'])->name('user.cre
 Route::post('create', [CrudUserController::class, 'createUser'])->name('user.createUser');
 Route::get('login', [CrudUserController::class, 'indexLogin'])->name('user.loginIndex');
 Route::post('login', [CrudUserController::class, 'customLogin'])->name('user.login');
-Route::get('list', [CrudUserController::class, 'listUser'])->name('user.listUserIndex');
-
+Route::get('list', [CrudUserController  ::class, 'listUser'])->name('user.listUserIndex');
+Route::get('user/{id}', [CrudUserController::class, 'detail'])->name('users.detail');
 Route::get('update', [CrudUserController::class, 'UpdateUser'])->name('user.UpdatetUser');
 Route::post('update', [CrudUserController::class, 'PostUpdateUser'])->name('user.PostUpdatetUser');
 

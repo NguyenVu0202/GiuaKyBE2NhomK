@@ -10,13 +10,15 @@
                             <th>ID</th>
                             <th>Name</th>
                             <th>Email</th>
+                            <th>Name image</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>01</td>
-                            <td>NguyenVu</td>
-                            <td>nhieucon2014ncvn@gmail.com</td>
+                            <td>{{ $user->id }}</td>
+                            <td>{{ $user->name }}</td>
+                            <td>{{ $user->email}}</td>
+                            <td>{{ $user->image}}</td>
                         </tr>
                     </tbody>
                 </table>

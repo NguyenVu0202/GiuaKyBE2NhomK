@@ -24,7 +24,7 @@
                                 <th>{{ $user->phone }}</th>
                                 <td><img style="width: 70px; height: 70px" src="{{ asset('uploads/userimage/' . $user->image) }}" alt="Phone Image"></td>
                                 <th>
-                                    <a href="">View</a> |
+                                        <a href="{{ route('users.detail', ['id' => $user->id]) }}">View</a> |
                                     <a href="{{ route('user.UpdatetUser', ['id' => $user->id]) }}">Edit</a> |
                                     <a href="{{route('user.deleteUser',['id' => $user->id]) }}">Delete</a>
                                 </th>

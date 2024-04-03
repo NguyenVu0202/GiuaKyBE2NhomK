@@ -55,6 +55,12 @@ class CrudUserController extends Controller
             return view('crud_user.list',['users' => $users]);
     }
 
+    public function detail($id)
+    {
+            $user = User::find($id);
+            return view('crud_user.read',['user' => $user]);
+    }
+
     public function UpdateUser(Request $request)
     {
         $user_id = $request->get('id');
