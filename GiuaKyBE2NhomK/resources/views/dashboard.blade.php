@@ -18,14 +18,14 @@
             <ul class="navbar-nav">
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link" href="">Login</a>
+                        <a class="nav-link" href="{{ route('user.loginIndex') }}">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Create user</a>
+                        <a class="nav-link" href="{{ route('user.createUserIndex') }}">Create user</a>
                     </li>
                 @else
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Logout</a>
+                        <a class="nav-link" href="{{ route('signout') }}">Logout</a>
                     </li>
                 @endguest
             </ul>

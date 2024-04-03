@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Routing\Redirector;
 use Hash;
+use Session;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 class CrudUserController extends Controller
@@ -45,7 +46,7 @@ class CrudUserController extends Controller
             'image' => $data['image'],      
         ]);
 
-        return redirect()->route('user.createUserIndex');
+        return redirect()->route('user.loginIndex');
     }
 
     public function listUser()
@@ -115,7 +116,7 @@ class CrudUserController extends Controller
 
     public function customLogin(Request $request)
     {
-        $request->validate([
+        $request->validate( [
             'email' => 'required',
             'password' => 'required',
         ]);
@@ -127,5 +128,12 @@ class CrudUserController extends Controller
         }
   
         return redirect("login")->withSuccess('Login details are not valid');
+    }
+    
+    public function signOut() {
+        Session::flush();
+        Auth::logout();
+
+        return Redirect('login');
     }
 }

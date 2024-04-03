@@ -25,3 +25,4 @@ Route::post('update', [CrudUserController::class, 'PostUpdateUser'])->name('user
 
 
 Route::get('delete', [CrudUserController::class, 'deleteUser'])->name('user.deleteUser');
+Route::get('signout', [CrudUserController::class, 'signOut'])->name('signout');
