@@ -108,4 +108,24 @@ class CrudUserController extends Controller
         $user = User::destroy($user_id);
         return redirect("list")->withSuccess('You have Signed-in');
     }
+    public function indexLogin()
+    {
+        return view('crud_user.login');
+    }
+
+    public function customLogin(Request $request)
+    {
+        $request->validate([
+            'email' => 'required',
+            'password' => 'required',
+        ]);
+   
+        $credentials = $request->only('email', 'password');
+        if (Auth::attempt($credentials)) {
+            return redirect()->intended('list')
+                        ->withSuccess('Signed in');
+        }
+  
+        return redirect("login")->withSuccess('Login details are not valid');
+    }
 }
