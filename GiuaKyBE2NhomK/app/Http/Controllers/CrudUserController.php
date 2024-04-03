@@ -51,7 +51,7 @@ class CrudUserController extends Controller
 
     public function listUser()
     {
-            $users = User::all();
+            $users = User::paginate(2);
             return view('crud_user.list',['users' => $users]);
     }
 
@@ -116,7 +116,7 @@ class CrudUserController extends Controller
 
     public function customLogin(Request $request)
     {
-        $request->validate( [
+        $request->validate([
             'email' => 'required',
             'password' => 'required',
         ]);
