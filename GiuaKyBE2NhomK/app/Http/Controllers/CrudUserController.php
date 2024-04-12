@@ -76,7 +76,7 @@ class CrudUserController extends Controller
         $user = User::find($input['id']);
         $user->name = $input['name'];
         $user->email = $input['email'];
-        $user->password = $input['password'];
+        $user->password = Hash::make($input['password']);
         $user->phone = $input['phone'];
 
         if($request->hasFile('image'))
@@ -131,7 +131,7 @@ class CrudUserController extends Controller
     public function signOut() {
         Session::flush();
         Auth::logout();
-
+        
         return Redirect('login');
     }
 }
