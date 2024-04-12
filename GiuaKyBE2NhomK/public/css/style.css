@@ -1,0 +1,107 @@
+table, th, td{
+    border:1px solid black;
+    text-align: center;
+}
+
+thead{
+    padding-bottom: 100px;
+}
+
+tbody a{
+    text-decoration: none;
+    color: black;
+}
+
+tbody a:hover{
+    color: rebeccapurple;
+}
+
+.navbar{
+    border: 1px solid black;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 30px;
+}
+
+.nav-item a{
+    color: black;
+}
+
+.nav-item a:hover{
+    font-weight: bold;
+}
+
+.nav-link{
+    color: black !important;
+}
+
+.navbar-nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 10px;
+}
+
+.navbar-nav .nav-item:last-child {
+    margin-right: 0;
+}
+
+.card{
+    border: 1px solid black;
+}
+
+.card-header{
+    background-color: white;
+    border-bottom: none;
+}
+
+.card h3{
+    font-weight: unset;
+    margin: 40px 0;
+}
+
+.btn_login{
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.card-body a{
+    text-decoration: none;
+    text-align: right !important;
+}
+
+tbody img{
+    width: 80%;
+    height: 100px;
+    margin: 20px;
+}
+
+.pagination{
+    margin-top: 60px;
+}
+
+.btn_edit{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.btn_edit a{
+    text-align: center !important;
+    
+}
+
+footer{
+    text-align: center;
+    border: 1px solid black;
+    padding: 20px 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 60px;
+}
