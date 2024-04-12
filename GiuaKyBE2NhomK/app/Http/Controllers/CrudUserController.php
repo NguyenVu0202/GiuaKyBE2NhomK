@@ -72,15 +72,7 @@ class CrudUserController extends Controller
     public function PostUpdateUser(Request $request)
     {
         $input = $request->all();
-
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required|email|unique:users',
-            'password' => 'required|min:6',
-            'phone' => 'required|max:10',
-            'image' => 'required'
-        ]);
-
+        
         $user = User::find($input['id']);
         $user->name = $input['name'];
         $user->email = $input['email'];
@@ -123,11 +115,11 @@ class CrudUserController extends Controller
     public function customLogin(Request $request)
     {
         $request->validate([
-            'email' => 'required',
+            'name' => 'required',
             'password' => 'required',
         ]);
    
-        $credentials = $request->only('email', 'password');
+        $credentials = $request->only('name', 'password');
         if (Auth::attempt($credentials)) {
             return redirect()->intended('list')
                         ->withSuccess('Signed in');
